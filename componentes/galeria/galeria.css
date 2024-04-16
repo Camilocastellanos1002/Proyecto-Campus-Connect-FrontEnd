@@ -1,0 +1,222 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif; 
+}
+body{
+    background-image:  url("/images/fondo_principal.png") ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.encabezado{
+    font-family: 'Montserrat', sans-serif; 
+    background-color: rgb(196, 48, 48);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 1.5rem;
+}
+
+.encabezado .titulo{
+    padding: 1rem;
+}
+.encabezado .subtitulo{
+    padding: 1rem;
+}
+
+
+.galeria_grid{
+    padding: 2rem;
+    padding-left: 18rem;
+    display:grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.titulo2{
+    text-align: center;
+    padding-top: 10rem;
+    padding-right: 15rem;
+}
+
+.galeria_grid img{
+    width: 40rem;
+    height: 30rem;
+}
+
+.galeria_grid .caja{
+    padding:1.5rem;
+
+}
+.galeria_grid :hover{
+    transform: scale(1.2);
+    border-radius: 5rem;    
+    background-color:  rgb(0, 158, 0)
+}
+.caja-botones{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.botones1{
+    display: flex;
+}
+
+.botonumero{
+    margin: .5rem;
+    padding: 1.5rem;
+    border-color: red;
+    color: red;
+    border-radius: .5rem;
+    
+    height: 1.5rem;
+    text-align: justify;
+}
+
+.botonsgte{
+    background-color: rgb(196, 48, 48);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border-color: red;
+    color: rgb(255, 255, 255);
+    border-radius: .5rem;
+    
+}
+/* pie de pagina */
+.pie{
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: space-around;
+    margin: 1rem;
+    gap: 1rem;
+    background-image:  url("/images/fondo_principal1.png") ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.pie_de_pagina{
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+    gap: 20rem;
+    color: white;
+}
+.escudo{
+    display: grid;
+    grid-template-rows: auto ;
+    gap: 1rem;
+}
+.enlaces{
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    padding: 1rem;
+    background-color: rgb(56, 42, 215);
+    border-radius: 2rem;
+    opacity: 0.8;
+}
+.enlaces a{
+    text-decoration: none;
+    color:white;
+    
+}
+.enlaces p{
+    font-size: 2.5rem;
+    color:white;
+}
+.contacto{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    justify-content:  center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: blueviolet;
+    border-radius: 2rem;
+    opacity: 0.8;
+}
+.redes_sociales{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    justify-content:  center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: orange;
+    border-radius: 2rem;
+    opacity: 0.8;
+}
+.redes_sociales a{
+    text-decoration: none;
+}
+.Copyright{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.nomenclatura{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.correo{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.telefono{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.Facebook{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.Twitter{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.nomenclatura{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.Instagram{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.Whattsapp{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}  

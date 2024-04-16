@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio: Padres de familia</title>
+    <link rel="stylesheet" href="inicio_padres.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" >
+
+    <script src="https://unpkg.com/read-excel-file@5.x/bundle/read-excel-file.min.js"></script>
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
+
+
+</head>
+<body>
+    <div class="inicio-padres">
+        <aside class="barra-inicio">
+            <section class="logo">
+                <!-- logo dinamico -->
+            </section>
+            <section class="caja-nombre">
+                <!-- icon dinamico -->
+                <h3 class="nombre">
+                Hola, Juan Perez<br>
+                Padre de familia  
+                </h3>
+            </section>
+            <section class="caja-opciones">
+                <!-- menu dinamico con el archivo estudiante.js-->
+            </section>
+        </aside>
+    <div class="tablero">
+        <section class="titulo">
+            <!-- logo bienvenida dinamico estudiante.js -->
+        </section>
+
+        <!--Calendario-->
+        <section id="calendar"></section>
+
+        <section class="info_tab">
+            <!-- contenido dinamico dependiendo del menu estudiante.js -->
+        </section>
+    </div>
+
+    <script src="/js/db.js"></script>
+    <script type="module" src="/js/padres.js" ></script>
+    <script type="module" src="/js/calendario.js"></script>
+ 
+    </div>
+</body>
+</html> 

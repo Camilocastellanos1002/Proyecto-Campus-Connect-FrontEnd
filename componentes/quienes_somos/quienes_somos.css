@@ -1,0 +1,270 @@
+.html{
+    font-size: 62.5%;
+         
+}
+
+.body{
+    font-size: 16px;  
+    display: grid;
+    grid-template-rows: auto auto;
+     
+}
+body{
+    background-image:  url("/images/fondo_principal.png") ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Grenze Gotisch', serif;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.encabezado{
+    background-color: rgb(196, 48, 48);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 1.5rem;
+}
+
+.introduccion{
+    display: grid;
+    grid-template-rows: 30% 60%;
+}
+
+.titulo2{
+    color:  rgb(196, 48, 48);
+    padding-left:2.5rem;
+    text-decoration: solid;
+    padding-top: 1.5rem;
+}
+.contenido_i{  
+    font-family: 'Montserrat', sans-serif; 
+    text-align: justify;
+    padding-left: 2.5rem;
+    padding-top: 1.5rem;
+    padding-right: 2.5rem;
+    line-height: 2rem ;
+}
+.caja-contenido p:hover{
+    transform: scale(1.0001);
+    margin: 1rem;
+    border-style: solid;
+    border-color:  rgb(0, 158, 0);
+    border-radius: 3rem;
+    
+}
+
+.caja-contenido{
+    font-family: 'Montserrat', sans-serif; 
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    padding-left: 2.5rem;
+    padding-bottom: 5rem;
+    padding-right: 2rem;
+
+    
+}
+.caja-contenido h1{
+    font-size: 1.5rem;
+    color: white;
+    
+}
+
+
+.caja-valores p:hover{
+    transform: scale(1.0001);
+    margin: 1rem;
+    border-style: solid;
+    border-color:  rgb(0, 158, 0);
+    border-radius: 3rem;
+    
+}
+
+
+.caja{ 
+    background-color: rgb(196, 48, 48);
+    border-radius: 1rem;
+    text-align: center;
+    padding: 5rem;
+    margin-left: 2rem;
+    color: white;
+    
+}
+.caja:hover{
+    transform: scale(1.1);
+    background-color: rgb(0, 158, 0);
+    
+}
+.cajat{
+    padding-left: 2.5rem;
+    padding-top: 1.5rem;
+    text-align: justify;
+    line-height: 2.5rem;
+    background-color: white;
+}
+.valores{
+    list-style: none; 
+    padding-top: 1rem;  
+}
+.valores :hover{
+    transform: scale(1.0001);
+    margin: 1rem;
+    border-style: solid;
+    border-color:  rgb(0, 158, 0);
+    border-radius: 3rem;
+    
+}
+.manual{
+    display: grid;
+    grid-template-rows: auto ;
+    background-color: rgb(196, 48, 48);
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+/* pie de pagina */
+.pie{
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: space-around;
+    margin: 1rem;
+    gap: 1rem;
+    background-image:  url("/images/fondo_principal1.png") ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+/* pie de pagina */
+.pie{
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: space-around;
+    background-image:  url("/images/fondo_principal1.png") ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.pie_de_pagina{
+    margin: 3rem;
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+    gap: 10rem;
+    color: white;
+}
+.escudo{
+    display: grid;
+    grid-template-rows: auto ;
+    gap: 1rem;
+}
+.enlaces{
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    padding: 1rem;
+    background-color: rgb(140, 206, 18);
+    border-radius: 2rem;
+    opacity: 0.8;
+}
+.enlaces a{
+    text-decoration: none;
+    color:white;
+    
+}
+.enlaces p{
+    font-size: 2.5rem;
+    color:white;
+}
+.contacto{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    justify-content:  center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    background-color:rgb(140, 206, 18);;
+    border-radius: 2rem;
+    opacity: 0.8;
+}
+.redes_sociales{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    justify-content:  center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: rgb(140, 206, 18);;
+    border-radius: 2rem;
+    opacity: 0.8;
+}
+.redes_sociales a{
+    text-decoration: none;
+    color: white;
+}
+.Copyright{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-weight: lighter;
+}
+.nomenclatura{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.correo{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.telefono{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.Facebook{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.Twitter{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.nomenclatura{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.Instagram{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.Whattsapp{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}  

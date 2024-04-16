@@ -1,0 +1,228 @@
+.html{
+    font-size: 62.5%;
+}
+.body{
+    font-size: 16px;
+}
+
+.inicio-estudiantes{
+    font-family: 'Montserrat', sans-serif; 
+    display: grid;
+    grid-template-columns: 32% auto;
+    margin:1.5rem;
+    border-radius: 1rem;
+}
+
+.barra-inicio{
+    background-color: darkred;
+    grid-column: 1/2;
+    border-radius: 1rem;
+}
+
+.logo{
+   margin:2rem 7.5rem;
+   border-radius: 2rem;
+}
+
+.caja-nombre{
+    border: .1rem;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    border-radius: .5rem;
+    border-color: white;
+    border-style: groove;
+    margin: 2rem;
+    margin-bottom: 4rem;
+}
+.caja-nombre svg{
+    margin-top: 1rem;
+}
+
+.imagen_titulo{
+    background-color: ivory;
+    margin-top: 1rem;
+}
+
+.caja{ 
+    border: .1rem;
+    color: white;
+    margin: 2rem 2.5rem;
+    padding: .3rem;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: .5rem;
+    border-color: white;
+    border-style: groove;
+    cursor: pointer;
+}
+
+.caja svg{
+    color: white;
+}
+
+
+.caja:hover{
+    background-color: rgb(102, 171, 41);
+    transition: background-color 0.5s;
+}
+
+
+.caja svg{
+    margin-top: .7rem;
+}
+
+
+.tablero{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: auto auto 15% 15% 15%;
+}
+
+.titulo{
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cursos{
+    grid-row: 3/4;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.materia{
+  display: grid;
+  grid-template-rows: auto auto auto auto ;
+    background-color: rgb(23, 161, 18);
+}
+.imgt{
+    grid-row: 2/3;
+    margin-left: 18rem;
+}
+#mi_img_tab{
+    border-radius: 2rem;
+}
+
+.cajac{
+    margin: .5rem;
+    padding: 2rem;
+    border-radius: .5rem;
+    color: white;
+}
+
+.cajac:hover{
+    background-color: darkred;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+
+.actividades{
+    grid-row: 4/5;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cajaA{
+    color: white;
+    margin: .5rem;
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: darkred;
+}
+.actividades2{
+    grid-row: 5/6;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cajaA:hover{
+    background-color: rgb(102, 171, 41);
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+.event_box{
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: groove;
+    border-color: darkred;
+    color: darkred;
+    padding: 1.5rem;
+    margin-left: 25rem;
+    margin-right: 25rem;
+    border-radius: 2rem;
+
+}
+.event_box :hover {
+    color: rgb(102, 171, 41);
+}
+
+#calendar{
+    display: grid;
+    border-style: solid;
+    max-width: auto;
+    max-height: auto;
+}
+
+#evento_por_fecha{
+    display: grid;
+    overflow:hidden;
+    font-size: 12px;
+}
+#calendar{
+    display: grid;
+    font-size: 1rem;
+    margin: 4rem 7rem ;
+    border-radius: 1.2rem;
+    padding: 0.5rem;
+    display: block;
+}
+#horario{
+    display: none;
+}
+
+
+.contenido_tab{
+  display: grid;
+  grid-row: auto auto auto;
+  margin:  0 10rem ;
+  gap: 1rem;
+  padding: 1rem;
+}
+.contenido_tab {
+  display: grid;
+  color: rgb(0, 0, 0);
+  grid-row: auto auto auto;
+  margin:  0 10rem ;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 2rem;  
+}
+
+/*Estilos seccion material de clase*/
+.video{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    margin: 0 10rem 0 10rem;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.titulo_video{
+    color: white;
+    text-decoration: none;
+}
+
+/*Estilos seccion santillana*/
+.santillana{
+    color: white;
+    text-decoration: none;
+}
+
+
+

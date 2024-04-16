@@ -1,0 +1,167 @@
+.html{
+    font-size: 62.5%;
+}
+.body{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.inicio-padres{
+    font-family: 'Montserrat', sans-serif; 
+    display: grid;
+    grid-template-columns: 32% auto;
+    margin:1rem;
+    border-radius: 1rem;
+}
+
+.barra-inicio{
+    background-color: darkred;
+    grid-column: 1/2;
+    border-radius: 1rem;
+}
+
+.logo{
+   margin:2rem 7.5rem;
+
+   border-radius: 2rem;
+}
+
+.caja-nombre{
+    border: .1rem;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    border-radius: .5rem;
+    border-color: white;
+    border-style: groove;
+    margin: 2rem;
+    margin-bottom: 4rem;
+}
+.caja-nombre svg{
+    margin-top: 1rem;
+}
+
+
+
+.caja{ 
+    border: .1rem;
+    color: white;
+    margin: 2rem 2.5rem;
+    padding: .3rem;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: .5rem;
+    border-color: white;
+    border-style: groove;
+    cursor: pointer;
+}
+
+.caja svg{
+    color: white;
+}
+
+
+.caja:hover{
+    background-color: rgb(102, 171, 41);
+    transition: background-color 0.5s;
+}
+
+
+.caja svg{
+    margin-top: .7rem;
+}
+
+
+.tablero{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: auto auto 15% 15% 15%;
+}
+
+.tablero .titulo{
+    padding-left: 12rem;
+    padding-top: 1rem;
+    grid-row: 1/2;
+}
+
+.cursos{
+    grid-row: 3/4;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.materia1{
+    background-color: rgb(49, 122, 225);
+}
+
+.materia2{
+    background-color: rgb(247, 132, 25);
+}
+.materia3{
+    background-color: rgb(254, 229, 35);
+}
+
+.cajac{
+    margin: .5rem;
+    padding: 2rem;
+    border-radius: .5rem;
+    color: white;
+}
+
+.cajac:hover{
+    background-color: darkred;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+
+.actividades{
+    grid-row: 4/5;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cajaA{
+    color: white;
+    margin: .5rem;
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: darkred;
+}
+.actividades2{
+    grid-row: 5/6;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cajaA:hover{
+    background-color: rgb(102, 171, 41);
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+.imgt{
+    grid-row: 2/3;
+    margin-left: 18rem;
+}
+
+#calendar{
+    display: grid;
+    border-style: solid;
+    max-width: auto;
+    max-height: auto;
+    margin: 2rem;
+}
+
+#evento_por_fecha{
+    display: grid;
+    overflow:hidden;
+    font-size: 12px;
+}
+#calendar{
+    display: grid;
+    font-size: 1rem;
+    margin: 0 10rem 0 10rem ;
+    border-radius: 1.2rem;
+    padding: 0.5rem;
+}

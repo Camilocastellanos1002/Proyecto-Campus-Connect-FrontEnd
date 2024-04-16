@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caminos del saber</title>
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch&family=Jost&family=Montserrat&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="Principal">
+        <section class="menu_ingreso">
+            <a class="log_in">
+                <nav class="despegable">
+                    <button class="boton_despegable1">
+                        <!-- aca se generan el primer boton dinamizado por javaScript-->
+                    </button>
+                    <section class="despegable-content">
+                        <!-- aca se generan el menu de log in dinamizado por javaScript-->
+                    </section>
+                </nav>
+            </a>
+            <a class="idioma">
+                <nav class="despegable2">
+            
+                    <div id="google_translate_element" class="google"></div>
+                    
+                </nav>
+            </a>
+            <a class="contraste">
+                <button class="boton_despegable3">
+                    <!-- aca se generan el tercer boton dinamizado por javaScript-->
+                </button>
+            </a>
+        </section>
+        <section class="menu">
+            <section class="logo_colegio">
+                <img src="/images/logo1.png" alt="" height="140" width="540">
+            </section>
+            <section class="barra_menu">
+                <!-- aca se generan la barra de menu dinamizados por javaScript-->
+            </section>
+        </section>
+    </header>
+    <main class="main">
+        <section class="despliegue_info">
+        <div class="slideshow-container">
+        
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="/images/01.jpg" style="width:100%">
+          <div class="text">Conoce nuestra institución</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="/images/02.jpg" style="width:100%">
+          <div class="text">Nuestros valores</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="/images/04.jpg" style="width:100%">
+          <div class="text">Nuestra familia</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        
+        <script>
+ 
+        </script>
+        </section>
+        <hr size="0px" color="white">
+        <section class="despliegue_publicidad">
+            <!-- aca se generan los recuadros de publicidad dinamizados por javaScript en el archivo recuadrosPublicidad.js -->
+        </section>
+        <section class="despliegue_eventos">
+            <section class="despli_info">
+                <section class="titulo_evento">
+                    <p><b>Próximos eventos</b></p>
+                </section>
+                <!-- aca se generan el resumen de los recuadros de publicidad dinamizados por javaScript en el archivo resumenEventos.js -->
+            </section>
+            <section>
+                <a class="botonmas" href="/componentes/noticias/noticiasyeventos.html">Más información </a>
+            </section>
+        </section>
+        <section class="despliegue_fotos">
+            <section class="despli_galeria">
+                <section class="imagen_evento">
+                    <p><b>Nuestros espacios <br>y estudiantes</p>
+                </section>
+                <!-- aca se generan el resumen de la galeria dinamizados por javaScript en el archivo resumenGaleria.js -->
+            </section>
+            <section>
+                <a class="botonmas" href="/componentes/galeria/galeria.html">Más información</a>
+            </section>
+        </section>
+        <section class="calendario">
+            <section class="titulo_calendario">
+                <h3>Calendario Mensual</h3>
+            </section>
+            <!--Calendario-->
+            <section id="calendar"></section>
+            <!-- <section class="prox_eve">
+                <section class="proximo_evento">6 de noviembre<br>dia del bancario</section>
+            </section> -->
+        </section>
+        <section class="mapa">
+            <section class="titulo_mapa">
+                <h3>Visítanos</h3>
+            </section>
+            <section class="el_mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d641.9708528638151!2d-74.66706653928034!3d5.451277597881155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e40dea17e363d17%3A0xa8583032ac003cd1!2sI.E.Caminos%20Del%20Saber!5e0!3m2!1ses-419!2sco!4v1698986978823!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </section>
+    </main>
+    <footer class="pie">
+        <section class="pie_de_pagina">
+            <section class="escudo">
+            <!-- aca se generan el logo de escudo en el archivo footer.js -->
+            </section>
+            <section class="enlaces">
+            <!-- aca se generan los links de enlace de cada menu en el archivo footer.js -->
+            </section>
+            <section class="contacto">
+            <!-- aca se generan la info de contacto en el archivo footer.js -->
+            </section>
+            <section class="redes_sociales">
+            <!-- aca se generan la info de redes sociales en el archivo footer.js -->
+            </section>
+        </section>
+        <section class="Copyright">
+            <!-- aca se generan el pie de pagina en el archivo footer.js -->
+        </section>
+    </footer>
+
+    <!-- anexo de scripts js -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'ca,eu,gl,en,fr,it,pt,de', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true}, 'google_translate_element');
+        }
+        </script>
+    <script src="/js/db.js"></script>
+    <script src="/js/resumen.js" type="module"></script>
+    <script src="/js/footer.js" type="module"></script>
+    <script src="/js/app.js" type="module"></script>
+    <!-- <script src="/js/eventos.js" type="module"></script> -->
+    <!-- <script src="/js/quienesSomos.js"></script>-->
+    <script type="module" src="/js/calendario.js"></script>
+    <script src="/js/slider.js"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
+
+</body>
+</html>
+
+<!--calendario
+     
+    https://www.youtube.com/watch?v=-fObF4wLhVo -->
