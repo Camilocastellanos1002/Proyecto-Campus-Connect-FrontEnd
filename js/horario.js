@@ -1,4 +1,4 @@
-const urlHorario="http://localhost:4001/horario";
+const urlHorario="http://localhost:4000/horario";
 
 export function horario(){
     /*  inicio calendario */

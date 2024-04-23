@@ -1,14 +1,14 @@
-const urlUsuarios = "http://localhost:4001/usuarios";
-const urlMaterias1="http://localhost:4001/materiasPrimero";
-const urlMaterias2="http://localhost:4001/materiasSegundo";
-const urlMaterias3="http://localhost:4001/materiasTercero";
-const urlMaterias4="http://localhost:4001/materiasCuarto";
-const urlMaterias5="http://localhost:4001/materiasQuinto";
-const urlEventos="http://localhost:4001/events";
-const urlHorario="http://localhost:4001/horario";
-const urlMaterias="http://localhost:4001/materias";
-const urlEmociones="http://localhost:4001/emociones";
-const urlCuento="http://localhost:4001/imagenesCuento";
+const urlUsuarios = "http://localhost:4000/usuarios";
+const urlMaterias1="http://localhost:4000/materiasPrimero";
+const urlMaterias2="http://localhost:4000/materiasSegundo";
+const urlMaterias3="http://localhost:4000/materiasTercero";
+const urlMaterias4="http://localhost:4000/materiasCuarto";
+const urlMaterias5="http://localhost:4000/materiasQuinto";
+const urlEventos="http://localhost:4000/events";
+const urlHorario="http://localhost:4000/horario";
+const urlMaterias="http://localhost:4000/materias";
+const urlEmociones="http://localhost:4000/emociones";
+const urlCuento="http://localhost:4000/imagenesCuento";
 
 /* obtener datos usuarios */
 
