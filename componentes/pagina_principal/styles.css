@@ -8,32 +8,13 @@ body{
     font-family: 'Jost', sans-serif;
     font-family: 'Montserrat', sans-serif;
 }
-
-
-hr{
-    display: hidden;
-}
-
-.Principal{
-    background-image:  url("/images/fondo_principal1.png" ) ;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-main{
-    background-image:  url("/images/fondo_principal.png") ;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-
 /* estilos del header */
     .Principal{
         display: grid;
         grid-template-rows: auto auto;
         align-items: center;
         font-size: 1.8rem;
+        gap: 1rem;
     }
 
     .menu_ingreso{
@@ -43,8 +24,7 @@ main{
         align-items: center;
         flex-wrap: wrap;
         gap: 2rem;
-        padding: .5rem;
-        margin-top: -.5rem;
+        margin-bottom: 2.5rem;
     }
     
     .menu_ingreso a{
@@ -52,30 +32,17 @@ main{
         gap: 1rem;
     }
     .log_in{
-        color: rgb(224, 28, 28);
         padding: 1rem;
         display: grid;
         align-items: center;
         justify-content: center;
+        margin: auto;
     }
-    /* @media (min-width:76.8rem){
-        .body{
-            display: grid;
-            grid-template-rows: auto auto auto;
-        }
-        .Principal{
-            display: grid;
-            grid-template-rows: auto auto;
-        }
-        .menu_ingreso{
-            display: grid;
-            grid-template-rows: auto auto auto auto auto;
-        }
-    } */
+
 /* botones despegables */
     .boton_despegable1{
         display: grid;
-        background-color: rgb(255, 250, 227);
+        background-color: rgb(255, 255, 255);
         border-radius: 1rem;
         border-style: none;
     }
@@ -87,85 +54,21 @@ main{
         display: none;
         position:absolute;
         overflow: auto;
-        box-shadow: 0px 8px 16px 0px rgb(255, 255, 255);
+        box-shadow: 0px 8px 16px 0px rgb(19, 139, 45);
         border-radius: 1.2rem;
     }
     .despegable-content a{
         display: block;
-        color:rgb(250, 234, 234) ;
-        background-color:rgb(224, 28, 28);
-        opacity: 0.9;
-        padding: 0.2rem;
+        color:rgb(255, 255, 255) ;
+        background-color: rgb(224, 28, 28);
+        padding: 1rem;
         text-decoration: none;
-
-
     }
     .despegable:hover .despegable-content{
         display: block;
     }
-    .despegable-content a:hover{
-        background-color: rgb(151, 228, 213);
-    }
 
-    .boton_despegable2{
-        display: grid;
-        background-color: rgb(255, 250, 227);
-        border-radius: 1rem;
-        border-style: none;
-    }
-    .despegable2{
-        display: inline-block;
-        position: relative;
-    }
-
-    .despegable2-content{
-        display: none;
-        position:absolute;
-        overflow: auto;
-        box-shadow: 0px 8px 16px 0px rgb(255, 255, 255);
-        border-radius: 1.2rem;
-    }
-    
-    .boton_despegable3{
-        display: grid;
-        background-color: rgb(255, 250, 227);
-        border-radius: 1rem;
-        border-style: none;
-    }
-    .despegable3{
-        display: inline-block;
-        position: relative;
-        main{
-            background-color: black;
-        }
-    }
-    .despegable2-content a{
-        display: block;
-        color: white;
-        padding: 0.5rem;
-        text-decoration: none;
-        background-color:rgb(224, 28, 28);
-        opacity: 0.9;
-        padding: 0.2rem;
-        text-decoration: none;
-
-    }
-    .despegable2:hover .despegable2-content{
-        display: block;
-    }
-    .despegable2-content a:hover{
-        background-color: rgb(151, 228, 213);
-    }
-    .contraste{
-        color: rgb(224, 28, 28);
-        padding: 0.5rem;
-        border-radius: 1rem;
-        display: grid;
-        grid-template-columns: auto auto;
-        align-items: center;
-        justify-content: center;
-    }
-    /* barras de menu */
+/* barras de menu */
     .menu{
         display: grid;
         grid-template-columns: 50% 50%;
@@ -182,11 +85,13 @@ main{
         justify-content: center;
         align-items: center;
         color: white;
+        border-radius: 2rem;
+        background-color: rgb(224, 28, 28);
         gap: 3.5rem;
     }
 
     .barra_menu a{
-        color: rgb(224, 28, 28);
+        color: rgb(255, 255, 255);
         padding: 1rem;
         border-radius: 1.5rem;
         font-size: 1.6rem;
@@ -194,96 +99,46 @@ main{
     .barra_menu .inicio:hover{
         transform: scale(1.2);
         background-color: rgb(0, 158, 0);
-        color: white;
+        box-shadow: 0px 8px 16px 0px rgb(255, 255, 255);
     }
     .barra_menu .quienessomos:hover{
         transform: scale(1.2);
         background-color: rgb(197, 210, 13);
-        color: white;
+        box-shadow: 0px 8px 16px 0px rgb(255, 255, 255);
     }
     .barra_menu .noticiasyeventos:hover{
         transform: scale(1.2);
         background-color: rgb(255, 189, 8);
-        color: white;
+        box-shadow: 0px 8px 16px 0px rgb(255, 255, 255);
     }
     .barra_menu .galeria:hover{
         transform: scale(1.2);
         background-color: rgb(42, 225, 216);
-        color: white;
+        box-shadow: 0px 8px 16px 0px rgb(255, 255, 255);
     }
     .barra_menu .contactenos:hover{
         transform: scale(1.2);
         background-color: rgb(211, 43, 227);
-        color: white;
-    }
-    
-    
-    .menu_ingreso a:hover{
-        color:rgb(164, 22, 22);
+        box-shadow: 0px 8px 16px 0px rgb(255, 255, 255);
     }
 /* estilos del main */
 
-/* despliegue de la imagen de pie de pagina */
-    .despliegue_info{
-        opacity: 0.9;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        border-radius: 20rem;
-        margin-top: -1.5rem;
-    }
-    .info{
-        display: grid;
-        grid-template-columns: 5% auto 5%;
-        justify-content: center;
-        align-items: center;
-        gap: 10rem;
-        padding: 20rem;
-    }
-    .info2 h1{
-        font-size: 6rem;
-        color: rgb(164, 22, 22);
-        font-style:italic;
-    }
-    .info2 p{
-        font-size: 3rem;
-        color: black;
-    }
-    /* .despliegue_info img{
-        border-radius: 5rem;
-        padding: 0;
-    } */
-    /* .imagen_despliegue:hover{
-        margin: 1rem;
-        transform: scale(1.15);
-    } */
-
-
-
-/* despliegue de publicidad */
+/* despliegue de atributos colegio */
     .despliegue_publicidad{
-        /* background-color: aqua; */
         padding: 1rem;
-        /* gap: 1rem;  */
         display: grid;
         grid-template-columns: auto auto;
     }
     .despliegue_publicidad :hover{
-        transform: scale(1.05);
-        flex-wrap: wrap;
-        border-color: rgb(0, 158, 0);
+        transform: scale(1.01);
     }
     .horizontal-card {
-        background-color: white;
         display: flex;
         border-radius: 0 10px 10px 0;
-        width: 500px;
+        width: 600px;
         -webkit-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.19);
         -moz-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.19);
-        box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.19);
+        box-shadow: 12px 12px 10px 10px rgba(0,0,0,0.19);
 
         
         .content {
@@ -313,44 +168,23 @@ main{
         gap: .5rem;
         grid-template-columns: auto auto;
         align-items: center;
-        margin: 7rem;
+        margin: 5rem;
         border-radius: .5rem;
-
     }
     .horizontal-card:hover{
-        background-color: rgb(196, 48, 48);
+        background-color: rgb(200, 109, 109);
+    }
+    .horizontal-card .title:hover{
         color: white;
     }
     .imager{
-        border-radius: 1.5rem;
-    }
-    .info_recuadro{
-        /* background-color: brown; */
-        display: grid;
-        padding: 1rem;
-        grid-template-rows: auto auto;
-        justify-content: center;
-        align-items: center;
+        border-radius: 1.1rem;
     }
 /* despliegue de eventos */
-    .despliegue_eventos{
-        display: grid;
-        grid-template-rows: auto auto;
-        margin: 1rem;
-    }
     .despli_info{
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto;
         margin: 1rem;
-    }
-
-    .titulo_evento{
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        margin: 1rem;
-        font-size: 3rem;
-        color: rgb(196, 48, 48);
     }
     .titulo_evento p{
         font-size: 2.5rem;
@@ -364,22 +198,13 @@ main{
         border-color:rgb(196, 48, 48);
         border-radius: 2rem;
         margin: 7rem;
-        background-color: lightyellow;
         -webkit-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.19);
         -moz-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.19);
-        box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.19);
+        box-shadow: 12px 12px 10px 10px rgba(0,0,0,0.19);
     }
     .evento:hover{
-        transform: scale(1.1);
+        transform: scale(1.05);
         background-color: rgb(83, 196, 48);
-        color: white;
-        
-    }
-    .info_eventos{
-        display: grid;
-        grid-template-rows: auto auto auto auto;
-        justify-content: center;
-        align-items: center;
     }
     .despliegue_eventos a{
         background-color: rgb(196, 48, 48);
@@ -390,7 +215,7 @@ main{
         color: white;
         display: flex;
         flex-direction: row;
-        justify-content: right;
+        justify-content: center;
         text-decoration: none;
     }
     .despliegue_eventos a:hover{
@@ -433,10 +258,6 @@ main{
         font-size: 2.5rem;
         color: rgb(196, 48, 48);
     }
-    .imagen_evento img{
-        margin: 1rem;
-        border-radius: 5rem;
-    }
     .despliegue_fotos a{
         background-color: rgb(196, 48, 48);
         border-radius: 1.5rem;
@@ -446,41 +267,12 @@ main{
         color: white;
         display: flex;
         flex-direction: row;
-        justify-content: right;
+        justify-content: center;
     }
     .despliegue_fotos a:hover{
         background-color: rgb(0, 158, 0);
     }
-/* calendario */
-    .calendario{
-        display: grid;
-        grid-template-columns: auto auto;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 10rem;
-        margin-top: 7rem;
-        margin-bottom: 2rem;
-        
-    }
-    /* .el_calendario iframe{
-        border-radius: 2rem;
-    } */
-    .titulo_calendario{
-        font-size: 2rem;
-        color: rgb(196, 48, 48);
-    }
-    /* .prox_eve{
-        display: grid;
-        border-style: solid;
-        padding: 10rem;
-        border-radius: 2rem;
-        background-color: rgb(255, 236, 236);
-    } */
-    /* .calendario :hover{
-        transform: scale(1.1);  
-        color: rgb(0, 158, 0);
-        border-color: rgb(0, 158, 0);   
-    } */
+
 /* Mapa */
     .mapa{
         display: grid;
@@ -513,10 +305,6 @@ main{
         display: grid;
         grid-template-rows: auto auto;
         justify-content: space-around;
-        background-image:  url("/images/fondo_principal1.png") ;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
     }
     .pie_de_pagina{
         margin: 3rem;
