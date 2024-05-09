@@ -10,10 +10,6 @@
      
 }
 body{
-    background-image:  url("/images/fondo_principal.png") ;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
     font-family: 'Grenze Gotisch', serif;
     font-family: 'Jost', sans-serif;
     font-family: 'Montserrat', sans-serif;
@@ -27,7 +23,7 @@ body{
     display: flex;
     justify-content: space-between;
     color: white;
-    padding: 1.5rem;
+    padding: 1.2rem;
 }
 
 .introduccion{
@@ -85,7 +81,18 @@ body{
     
 }
 
-
+.mision{
+    background-image: url("../../images/04.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.vision{
+    background-image: url("../../images/01.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
 .caja{ 
     background-color: rgb(196, 48, 48);
     border-radius: 1rem;
@@ -134,20 +141,6 @@ body{
     justify-content: space-around;
     margin: 1rem;
     gap: 1rem;
-    background-image:  url("/images/fondo_principal1.png") ;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-/* pie de pagina */
-.pie{
-    display: grid;
-    grid-template-rows: auto auto;
-    justify-content: space-around;
-    background-image:  url("/images/fondo_principal1.png") ;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
 }
 .pie_de_pagina{
     margin: 3rem;

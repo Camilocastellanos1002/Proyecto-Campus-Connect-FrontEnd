@@ -5,12 +5,6 @@ body{
     font-size: 16px;
     font-family: 'Montserrat', sans-serif; 
 }
-body{
-    background-image:  url("/images/fondo_principal.png") ;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
 
 .encabezado{
     font-family: 'Montserrat', sans-serif; 
@@ -99,10 +93,6 @@ body{
     justify-content: space-around;
     margin: 1rem;
     gap: 1rem;
-    background-image:  url("/images/fondo_principal1.png") ;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
 }
 .pie_de_pagina{
     margin: 1rem;

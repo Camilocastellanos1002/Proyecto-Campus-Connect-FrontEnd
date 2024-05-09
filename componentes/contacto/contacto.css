@@ -7,12 +7,6 @@
     display: grid;
     grid-template-rows: auto auto;
 }
-body{
-    background-image:  url("/images/fondo_principal.png") ;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
 
 .encabezado{
     font-family: 'Montserrat', sans-serif; 
@@ -93,6 +87,33 @@ body{
     border-radius: 1rem;
     border-color: white;
 }
+/* Mapa */
+    .mapa{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        align-items: center;
+        gap: 20rem;
+        color: rgb(196, 48, 48);
+    }
+    .titulo_mapa{
+        
+        font-size: 2rem;
+    }
+    .titulo_mapa{
+        font-size: 2rem;
+    }
+    .el_mapa{
+        margin: 5rem 0 5rem 0;
+    }
+    .el_mapa iframe{
+        border-radius: 2rem;
+        border-style: solid;
+    }
+    .el_mapa :hover{
+        transform: scale(1.1);
+    }
+
 /* pie de pagina */
 .pie{
     display: grid;
@@ -100,10 +121,6 @@ body{
     justify-content: space-around;
     margin: 1rem;
     gap: 1rem;
-    background-image:  url("/images/fondo_principal1.png") ;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
 }
 .pie_de_pagina{
     margin: 1rem;
