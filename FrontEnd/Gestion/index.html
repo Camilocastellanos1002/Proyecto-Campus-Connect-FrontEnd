@@ -32,7 +32,6 @@
         </ul>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="usuarios" role="tabpanel">
-                <!-- CRUD de Usuarios -->
                 <h2 class="mt-4">Usuarios</h2>
                 <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#usuarioModal">Agregar Usuario</button>
                 <input type="text" id="buscarUsuario" class="form-control mb-3" placeholder="Buscar usuario por nombre, correo electrónico, rol...">
@@ -47,12 +46,10 @@
                         </tr>
                     </thead>
                     <tbody id="usuarioTableBody">
-                        <!-- Contenido dinámico -->
                     </tbody>
                 </table>
             </div>
             <div class="tab-pane fade" id="grupos" role="tabpanel">
-                <!-- CRUD de Grupos -->
                 <h2 class="mt-4">Grupos</h2>
                 <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#grupoModal">Agregar Grupo</button>
                 <table class="table table-bordered">
@@ -65,12 +62,10 @@
                         </tr>
                     </thead>
                     <tbody id="grupoTableBody">
-                        <!-- Contenido dinámico -->
                     </tbody>
                 </table>
             </div>
             <div class="tab-pane fade" id="clases" role="tabpanel">
-                <!-- CRUD de Clases -->
                 <h2 class="mt-4">Clases</h2>
                 <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#claseModal">Agregar Clase</button>
                 <table class="table table-bordered">
@@ -86,12 +81,10 @@
                         </tr>
                     </thead>
                     <tbody id="claseTableBody">
-                        <!-- Contenido dinámico -->
                     </tbody>
                 </table>
             </div>
             <div class="tab-pane fade" id="asignaturas" role="tabpanel">
-                <!-- CRUD de Asignaturas -->
                 <h2 class="mt-4">Asignaturas</h2>
                 <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#asignaturaModal">Agregar Asignatura</button>
                 <table class="table table-bordered">
@@ -107,12 +100,10 @@
                         </tr>
                     </thead>
                     <tbody id="asignaturaTableBody">
-                        <!-- Contenido dinámico -->
                     </tbody>
                 </table>
             </div>
             <div class="tab-pane fade" id="eventos" role="tabpanel">
-                <!-- CRUD de Eventos -->
                 <h2 class="mt-4">Eventos</h2>
                 <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#eventoModal">Agregar Evento</button>
                 <table class="table table-bordered">
@@ -128,12 +119,10 @@
                         </tr>
                     </thead>
                     <tbody id="eventoTableBody">
-                        <!-- Contenido dinámico -->
                     </tbody>
                 </table>
             </div>
             <div class="tab-pane fade" id="asistencia" role="tabpanel">
-                <!-- Modificación de Asistencia -->
                 <h2 class="mt-4">Asistencia</h2>
                 <table class="table table-bordered">
                     <thead>
@@ -145,14 +134,12 @@
                         </tr>
                     </thead>
                     <tbody id="asistenciaTableBody">
-                        <!-- Contenido dinámico -->
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 
-    <!-- Modal para Usuarios -->
     <div class="modal fade" id="usuarioModal" tabindex="-1" role="dialog" aria-labelledby="usuarioModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -168,6 +155,26 @@
                             <label for="usuarioNombre">Nombre</label>
                             <input type="text" class="form-control" id="usuarioNombre" required>
                         </div>
+                        <!-- <div class="form-group">
+                            <label for="usuarioApellido">Apellido</label>
+                            <input type="text" class="form-control" id="usuarioApellido" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="usuarioTipoDocumento">Tipo Documento</label>
+                            <select class="form-control" id="usuarioTipoDocumento" required>
+                                <option value="RegistroNacimiento">Registro de Nacimiento</option>
+                                <option value="TarjetaIdentidad">Tarjeta de identidad</option>
+                                <option value="Cedula">Cedula</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="usuarioDocumento">Numero de Documento</label>
+                            <input type="number" class="form-control" id="usuarioDocumento" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="usuarioEdad">Edad</label>
+                            <input type="number" class="form-control" id="usuarioEdad" required>
+                        </div> -->
                         <div class="form-group">
                             <label for="usuarioEmail">Correo Electrónico</label>
                             <input type="email" class="form-control" id="usuarioEmail" required>
@@ -186,7 +193,6 @@
         </div>
     </div>
 
-    <!-- Modal para Grupos -->
     <div class="modal fade" id="grupoModal" tabindex="-1" role="dialog" aria-labelledby="grupoModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -213,7 +219,6 @@
         </div>
     </div>
 
-    <!-- Modal para Clases -->
     <div class="modal fade" id="claseModal" tabindex="-1" role="dialog" aria-labelledby="claseModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -240,13 +245,11 @@
                         <div class="form-group">
                             <label for="claseProfesor">Profesor</label>
                             <select class="form-control" id="claseProfesor" required>
-                                <!-- Opciones dinámicas -->
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="claseGrupo">Grupo</label>
                             <select class="form-control" id="claseGrupo" required>
-                                <!-- Opciones dinámicas -->
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Guardar</button>
@@ -256,7 +259,6 @@
         </div>
     </div>
 
-    <!-- Modal para Asignaturas -->
     <div class="modal fade" id="asignaturaModal" tabindex="-1" role="dialog" aria-labelledby="asignaturaModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -283,13 +285,11 @@
                         <div class="form-group">
                             <label for="asignaturaProfesor">Profesor</label>
                             <select class="form-control" id="asignaturaProfesor" required>
-                                <!-- Opciones dinámicas -->
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="asignaturaClase">Clase</label>
                             <select class="form-control" id="asignaturaClase" required>
-                                <!-- Opciones dinámicas -->
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Guardar</button>
@@ -299,7 +299,6 @@
         </div>
     </div>
 
-    <!-- Modal para Eventos -->
     <div class="modal fade" id="eventoModal" tabindex="-1" role="dialog" aria-labelledby="eventoModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

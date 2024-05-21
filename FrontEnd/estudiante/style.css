@@ -1,0 +1,16 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+#message-form, #emociones-form {
+    margin-top: 20px;
+}
+
+#emociones-historial {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}

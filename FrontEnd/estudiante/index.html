@@ -1,142 +1,147 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Estudiantes</title>
+    <title>Vista del Estudiante</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            padding-top: 56px;
-        }
-        .container {
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">Panel de Estudiantes</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#informacionAcademica">Información Académica</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#comunicacionProfesores">Comunicación</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contenidoAdicional">Contenido Adicional</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#calendarioAcademico">Calendario</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#registroEmociones">Registro de Emociones</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-<!-- Información Académica -->
-<div id="informacionAcademica" class="container">
-    <h2>Información Académica</h2>
-    <div id="asignaturasCursadas">
-        <h3>Asignaturas Cursadas</h3>
-        <!-- Aquí se mostrarán las asignaturas cursadas -->
-    </div>
-    <div id="actividades">
-        <h3>Actividades</h3>
-        <!-- Aquí se mostrarán las actividades -->
-    </div>
-    <div id="calificaciones">
-        <h3>Calificaciones</h3>
-        <!-- Aquí se mostrarán las calificaciones -->
-    </div>
-    <div id="horarioAsignaturas">
-        <h3>Horario de las Asignaturas</h3>
-        <!-- Aquí se mostrará el horario -->
-    </div>
-    <div id="grupo">
-        <h3>Grupo</h3>
-        <!-- Aquí se mostrará el grupo -->
-    </div>
-    <div id="profesorGrupo">
-        <h3>Profesor del Grupo</h3>
-        <!-- Aquí se mostrará la información del profesor del grupo -->
-    </div>
-    <div id="profesoresAsignaturas">
-        <h3>Profesores de las Asignaturas</h3>
-        <!-- Aquí se mostrará la información de los profesores de las asignaturas -->
-    </div>
-</div>
-
-<!-- Comunicación con Profesores -->
-<div id="comunicacionProfesores" class="container">
-    <h2>Comunicación con Profesores</h2>
-    <form id="mensajeForm">
-        <div class="form-group">
-            <label for="asunto">Asunto</label>
-            <input type="text" class="form-control" id="asunto" required>
+    <div class="container">
+        <h1 class="mt-4">Información Académica</h1>
+        <div class="card mt-4">
+            <div class="card-header">
+                Asignaturas Cursadas
+            </div>
+            <div class="card-body">
+                <ul id="asignaturas-list" class="list-group">
+                    <!-- Asignaturas -->
+                </ul>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="mensaje">Mensaje</label>
-            <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                Actividades
+            </div>
+            <div class="card-body">
+                <ul id="actividades-list" class="list-group">
+                    <!-- Actividades -->
+                </ul>
+            </div>
         </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
-    <div id="notificaciones">
-        <h3>Notificaciones</h3>
-        <!-- Aquí se mostrarán las notificaciones -->
+
+        <div class="card mt-4">
+            <div class="card-header">
+                Calificaciones Obtenidas
+            </div>
+            <div class="card-body">
+                <ul id="calificaciones-list" class="list-group">
+                    <!-- Calificaciones -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                Horario de las Asignaturas
+            </div>
+            <div class="card-body">
+                <ul id="horario-list" class="list-group">
+                    <!-- Horarios -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                Grupo al que Pertenece
+            </div>
+            <div class="card-body">
+                <ul id="grupo-list" class="list-group">
+                    <!-- Información del grupo  -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                Comunicación con Profesores
+            </div>
+            <div class="card-body">
+                <form id="message-form">
+                    <div class="form-group">
+                        <label for="profesor-select">Profesor</label>
+                        <select id="profesor-select" class="form-control">
+                            <!-- Opciones de profesores -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Asunto</label>
+                        <input type="text" id="subject" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" class="form-control" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                Contenido Adicional de las Asignaturas
+            </div>
+            <div class="card-body">
+                <ul id="contenido-list" class="list-group">
+                    <!-- Contenido adicional  -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                Calendario Académico
+            </div>
+            <div class="card-body">
+                <ul id="calendario-list" class="list-group">
+                    <!-- Eventos del calendario  -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                Registro de Emociones
+            </div>
+            <div class="card-body">
+                <form id="emociones-form">
+                    <div class="form-group">
+                        <label for="emocion-select">Emoción</label>
+                        <select id="emocion-select" class="form-control">
+                            <option value="feliz">Feliz</option>
+                            <option value="triste">Triste</option>
+                            <option value="ansioso">Ansioso</option>
+                            <!-- Más emociones aquí -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="comentarios">Comentarios</label>
+                        <textarea id="comentarios" class="form-control" rows="2"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                </form>
+                <div id="emociones-historial" class="mt-4">
+                    <!-- Historial de emociones  -->
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-
-<!-- Contenido Adicional -->
-<div id="contenidoAdicional" class="container">
-    <h2>Contenido Adicional de las Asignaturas</h2>
-    <!-- Aquí se mostrará el contenido adicional -->
-</div>
-
-<!-- Calendario Académico -->
-<div id="calendarioAcademico" class="container">
-    <h2>Calendario Académico</h2>
-    <!-- Aquí se mostrará el calendario académico -->
-</div>
-
-<!-- Registro de Emociones -->
-<div id="registroEmociones" class="container">
-    <h2>Registro de Emociones</h2>
-    <form id="emocionesForm">
-        <div class="form-group">
-            <label for="estadoAnimo">Estado de Ánimo</label>
-            <select class="form-control" id="estadoAnimo">
-                <option>Feliz</option>
-                <option>Triste</option>
-                <option>Ansioso</option>
-                <option>Enojado</option>
-                <!-- Agregar más opciones según sea necesario -->
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="comentarios">Comentarios</label>
-            <textarea class="form-control" id="comentarios" rows="3"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Registrar</button>
-    </form>
-    <div id="historialEmociones">
-        <h3>Historial de Emociones</h3>
-        <!-- Aquí se mostrará el historial de emociones -->
-    </div>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

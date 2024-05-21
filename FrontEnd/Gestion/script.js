@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const asignaturaForm = document.getElementById("asignaturaForm");
     const eventoForm = document.getElementById("eventoForm");
 
-    // Datos
     let usuarios = [];
     let grupos = [];
     let clases = [];
@@ -23,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
     let eventos = [];
     let asistencias = [];
 
-    // Función para renderizar tablas
     function renderTable(data, tbody, customRow) {
         tbody.innerHTML = '';
         data.forEach((item, index) => {
@@ -32,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Función para renderizar la tabla de usuarios
     function renderUsuariosTable() {
         const filteredUsuarios = usuarios.filter(user => 
             user.nombre.toLowerCase().includes(buscarUsuario.value.toLowerCase()) ||
@@ -53,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function() {
         `);
     }
 
-    // Función para renderizar la tabla de grupos
     function renderGruposTable() {
         renderTable(grupos, grupoTableBody, (grupo, index) => `
             <tr>
@@ -68,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function() {
         `);
     }
 
-    // Función para renderizar la tabla de clases
     function renderClasesTable() {
         renderTable(clases, claseTableBody, (clase, index) => `
             <tr>
@@ -86,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function() {
         `);
     }
 
-    // Función para renderizar la tabla de asignaturas
     function renderAsignaturasTable() {
         renderTable(asignaturas, asignaturaTableBody, (asignatura, index) => `
             <tr>
@@ -104,7 +98,6 @@ document.addEventListener("DOMContentLoaded", function() {
         `);
     }
 
-    // Función para renderizar la tabla de eventos
     function renderEventosTable() {
         renderTable(eventos, eventoTableBody, (evento, index) => `
             <tr>
@@ -122,7 +115,6 @@ document.addEventListener("DOMContentLoaded", function() {
         `);
     }
 
-    // Función para renderizar la tabla de asistencia
     function renderAsistenciaTable() {
         renderTable(asistencias, asistenciaTableBody, (asistencia, index) => `
             <tr>
@@ -136,10 +128,10 @@ document.addEventListener("DOMContentLoaded", function() {
         `);
     }
 
-    // Agregar usuario
     usuarioForm.addEventListener("submit", function(event) {
         event.preventDefault();
         const newUser = {
+            nombre: document.getElementById("usuarioNombre").value,
             nombre: document.getElementById("usuarioNombre").value,
             email: document.getElementById("usuarioEmail").value,
             rol: document.getElementById("usuarioRol").value
@@ -150,7 +142,6 @@ document.addEventListener("DOMContentLoaded", function() {
         usuarioForm.reset();
     });
 
-    // Agregar grupo
     grupoForm.addEventListener("submit", function(event) {
         event.preventDefault();
         const newGrupo = {
@@ -163,7 +154,6 @@ document.addEventListener("DOMContentLoaded", function() {
         grupoForm.reset();
     });
 
-    // Agregar clase
     claseForm.addEventListener("submit", function(event) {
         event.preventDefault();
         const newClase = {
@@ -179,7 +169,6 @@ document.addEventListener("DOMContentLoaded", function() {
         claseForm.reset();
     });
 
-    // Agregar asignatura
     asignaturaForm.addEventListener("submit", function(event) {
         event.preventDefault();
         const newAsignatura = {
@@ -195,7 +184,6 @@ document.addEventListener("DOMContentLoaded", function() {
         asignaturaForm.reset();
     });
 
-    // Agregar evento
     eventoForm.addEventListener("submit", function(event) {
         event.preventDefault();
         const newEvento = {
@@ -211,10 +199,8 @@ document.addEventListener("DOMContentLoaded", function() {
         eventoForm.reset();
     });
 
-    // Buscar usuario
     buscarUsuario.addEventListener("input", renderUsuariosTable);
 
-    // Función para editar un usuario
     window.editUsuario = function(index) {
         const user = usuarios[index];
         document.getElementById("usuarioNombre").value = user.nombre;
@@ -233,13 +219,11 @@ document.addEventListener("DOMContentLoaded", function() {
         };
     };
 
-    // Función para eliminar un usuario (baja lógica)
     window.deleteUsuario = function(index) {
         usuarios[index].deleted = true;
         renderUsuariosTable();
     };
 
-    // Función para editar un grupo
     window.editGrupo = function(index) {
         const grupo = grupos[index];
         document.getElementById("grupoNombre").value = grupo.nombre;
@@ -256,13 +240,11 @@ document.addEventListener("DOMContentLoaded", function() {
         };
     };
 
-    // Función para eliminar un grupo (baja lógica)
     window.deleteGrupo = function(index) {
         grupos[index].deleted = true;
         renderGruposTable();
     };
 
-    // Función para editar una clase
     window.editClase = function(index) {
         const clase = clases[index];
         document.getElementById("claseNombre").value = clase.nombre;
@@ -285,13 +267,11 @@ document.addEventListener("DOMContentLoaded", function() {
         };
     };
 
-    // Función para eliminar una clase (baja lógica)
     window.deleteClase = function(index) {
         clases[index].deleted = true;
         renderClasesTable();
     };
 
-    // Función para editar una asignatura
     window.editAsignatura = function(index) {
         const asignatura = asignaturas[index];
         document.getElementById("asignaturaNombre").value = asignatura.nombre;
@@ -314,13 +294,11 @@ document.addEventListener("DOMContentLoaded", function() {
         };
     };
 
-    // Función para eliminar una asignatura (baja lógica)
     window.deleteAsignatura = function(index) {
         asignaturas[index].deleted = true;
         renderAsignaturasTable();
     };
 
-    // Función para editar un evento
     window.editEvento = function(index) {
         const evento = eventos[index];
         document.getElementById("eventoNombre").value = evento.nombre;
@@ -343,19 +321,16 @@ document.addEventListener("DOMContentLoaded", function() {
         };
     };
 
-    // Función para eliminar un evento (baja lógica)
     window.deleteEvento = function(index) {
         eventos[index].deleted = true;
         renderEventosTable();
     };
 
-    // Función para alternar la asistencia
     window.toggleAsistencia = function(index) {
         asistencias[index].asistencia = !asistencias[index].asistencia;
         renderAsistenciaTable();
     };
 
-    // Cargar datos iniciales (dummy)
     usuarios = [
         { nombre: "Juan Perez", email: "juan@example.com", rol: "Estudiante" },
         { nombre: "Maria Lopez", email: "maria@example.com", rol: "Profesor" }
@@ -386,7 +361,6 @@ document.addEventListener("DOMContentLoaded", function() {
         { estudianteId: "2", estudianteNombre: "Maria Lopez", clase: "Física", asistencia: false }
     ];
 
-    // Renderizar tablas iniciales
     renderUsuariosTable();
     renderGruposTable();
     renderClasesTable();
