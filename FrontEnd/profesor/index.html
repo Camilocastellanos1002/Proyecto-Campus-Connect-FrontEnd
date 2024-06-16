@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Actividades y Eventos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Gestión de Actividades y Eventos</h1>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Dashboard</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#calendario">Calendario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#asignaturas">Asignaturas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#calificaciones">Calificaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#asistencia">Asistencia</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="calendario" class="my-4">
+            <h2>Calendario Académico</h2>
+            <div id="calendar"></div>
+        </div>
+
+        <div id="asignaturas" class="my-4">
+            <h2>Gestión de Actividades en las Asignaturas</h2>
+            <button class="btn btn-primary mb-3" onclick="crearActividad()">Crear Actividad</button>
+            <div id="actividades"></div>
+        </div>
+
+        <div id="calificaciones" class="my-4">
+            <h2>Registro de Calificaciones</h2>
+            <div id="calificaciones-list"></div>
+        </div>
+
+        <div id="asistencia" class="my-4">
+            <h2>Gestión de Asistencia</h2>
+            <div id="asistencia-list"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

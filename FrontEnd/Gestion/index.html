@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador del Colegio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Administrador del Colegio</h1>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="usuarios-tab" data-toggle="tab" href="#usuarios" role="tab">Usuarios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="grupos-tab" data-toggle="tab" href="#grupos" role="tab">Grupos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="clases-tab" data-toggle="tab" href="#clases" role="tab">Clases</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="asignaturas-tab" data-toggle="tab" href="#asignaturas" role="tab">Asignaturas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="eventos-tab" data-toggle="tab" href="#eventos" role="tab">Eventos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="asistencia-tab" data-toggle="tab" href="#asistencia" role="tab">Asistencia</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="usuarios" role="tabpanel">
+                <h2 class="mt-4">Usuarios</h2>
+                <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#usuarioModal">Agregar Usuario</button>
+                <input type="text" id="buscarUsuario" class="form-control mb-3" placeholder="Buscar usuario por nombre, correo electrónico, rol...">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Correo Electrónico</th>
+                            <th>Rol</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usuarioTableBody">
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="grupos" role="tabpanel">
+                <h2 class="mt-4">Grupos</h2>
+                <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#grupoModal">Agregar Grupo</button>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="grupoTableBody">
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="clases" role="tabpanel">
+                <h2 class="mt-4">Clases</h2>
+                <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#claseModal">Agregar Clase</button>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Horario</th>
+                            <th>Profesor</th>
+                            <th>Grupo</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="claseTableBody">
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="asignaturas" role="tabpanel">
+                <h2 class="mt-4">Asignaturas</h2>
+                <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#asignaturaModal">Agregar Asignatura</button>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Código</th>
+                            <th>Descripción</th>
+                            <th>Profesor</th>
+                            <th>Clase</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="asignaturaTableBody">
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="eventos" role="tabpanel">
+                <h2 class="mt-4">Eventos</h2>
+                <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#eventoModal">Agregar Evento</button>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Lugar</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="eventoTableBody">
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="asistencia" role="tabpanel">
+                <h2 class="mt-4">Asistencia</h2>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ID Estudiante</th>
+                            <th>Nombre</th>
+                            <th>Clase</th>
+                            <th>Asistencia</th>
+                        </tr>
+                    </thead>
+                    <tbody id="asistenciaTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="usuarioModal" tabindex="-1" role="dialog" aria-labelledby="usuarioModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="usuarioModalLabel">Agregar Usuario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="usuarioForm">
+                        <div class="form-group">
+                            <label for="usuarioNombre">Nombre</label>
+                            <input type="text" class="form-control" id="usuarioNombre" required>
+                        </div>
+                        <!-- <div class="form-group">
+                            <label for="usuarioApellido">Apellido</label>
+                            <input type="text" class="form-control" id="usuarioApellido" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="usuarioTipoDocumento">Tipo Documento</label>
+                            <select class="form-control" id="usuarioTipoDocumento" required>
+                                <option value="RegistroNacimiento">Registro de Nacimiento</option>
+                                <option value="TarjetaIdentidad">Tarjeta de identidad</option>
+                                <option value="Cedula">Cedula</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="usuarioDocumento">Numero de Documento</label>
+                            <input type="number" class="form-control" id="usuarioDocumento" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="usuarioEdad">Edad</label>
+                            <input type="number" class="form-control" id="usuarioEdad" required>
+                        </div> -->
+                        <div class="form-group">
+                            <label for="usuarioEmail">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="usuarioEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="usuarioRol">Rol</label>
+                            <select class="form-control" id="usuarioRol" required>
+                                <option value="Estudiante">Estudiante</option>
+                                <option value="Profesor">Profesor</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="grupoModal" tabindex="-1" role="dialog" aria-labelledby="grupoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="grupoModalLabel">Agregar Grupo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="grupoForm">
+                        <div class="form-group">
+                            <label for="grupoNombre">Nombre</label>
+                            <input type="text" class="form-control" id="grupoNombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="grupoDescripcion">Descripción</label>
+                            <input type="text" class="form-control" id="grupoDescripcion">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="claseModal" tabindex="-1" role="dialog" aria-labelledby="claseModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="claseModalLabel">Agregar Clase</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="claseForm">
+                        <div class="form-group">
+                            <label for="claseNombre">Nombre</label>
+                            <input type="text" class="form-control" id="claseNombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="claseDescripcion">Descripción</label>
+                            <input type="text" class="form-control" id="claseDescripcion">
+                        </div>
+                        <div class="form-group">
+                            <label for="claseHorario">Horario</label>
+                            <input type="text" class="form-control" id="claseHorario" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="claseProfesor">Profesor</label>
+                            <select class="form-control" id="claseProfesor" required>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="claseGrupo">Grupo</label>
+                            <select class="form-control" id="claseGrupo" required>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="asignaturaModal" tabindex="-1" role="dialog" aria-labelledby="asignaturaModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="asignaturaModalLabel">Agregar Asignatura</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="asignaturaForm">
+                        <div class="form-group">
+                            <label for="asignaturaNombre">Nombre</label>
+                            <input type="text" class="form-control" id="asignaturaNombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="asignaturaCodigo">Código</label>
+                            <input type="text" class="form-control" id="asignaturaCodigo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="asignaturaDescripcion">Descripción</label>
+                            <input type="text" class="form-control" id="asignaturaDescripcion">
+                        </div>
+                        <div class="form-group">
+                            <label for="asignaturaProfesor">Profesor</label>
+                            <select class="form-control" id="asignaturaProfesor" required>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="asignaturaClase">Clase</label>
+                            <select class="form-control" id="asignaturaClase" required>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="eventoModal" tabindex="-1" role="dialog" aria-labelledby="eventoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="eventoModalLabel">Agregar Evento</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="eventoForm">
+                        <div class="form-group">
+                            <label for="eventoNombre">Nombre</label>
+                            <input type="text" class="form-control" id="eventoNombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventoDescripcion">Descripción</label>
+                            <input type="text" class="form-control" id="eventoDescripcion">
+                        </div>
+                        <div class="form-group">
+                            <label for="eventoFecha">Fecha</label>
+                            <input type="date" class="form-control" id="eventoFecha" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventoHora">Hora</label>
+                            <input type="time" class="form-control" id="eventoHora" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventoLugar">Lugar</label>
+                            <input type="text" class="form-control" id="eventoLugar">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
